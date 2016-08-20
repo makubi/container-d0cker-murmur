@@ -1,0 +1,14 @@
+version: '2'
+
+services:
+  murmur:
+    image: makubi/murmur
+    ports:
+      - "64738/tcp"
+      - "64738/udp"
+    volumes:
+      - murmur-data:/var/lib/murmur
+
+volumes:
+  murmur-data:
+    external: false
